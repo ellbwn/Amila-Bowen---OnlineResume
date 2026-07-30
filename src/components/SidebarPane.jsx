@@ -2,17 +2,7 @@ import React from 'react';
 import { contactInfo } from '../data/resumeData';
 import { Mail, MapPin, Linkedin, Copy, ExternalLink } from 'lucide-react';
 
-interface SidebarPaneProps {
-  customImage?: string | null;
-  onImageChange?: (url: string) => void;
-  selectedSkillFilter?: string | null;
-  onSelectSkillFilter?: (skill: string | null) => void;
-  onCopyText?: (text: string, label: string) => void;
-  onPrintResume?: () => void;
-  onOpenContactModal?: () => void;
-}
-
-export const SidebarPane: React.FC<SidebarPaneProps> = ({
+export const SidebarPane = ({
   onCopyText
 }) => {
   return (

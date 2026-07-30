@@ -1,7 +1,7 @@
 import React from 'react';
 import { contactInfo, experiences, skillCategories, educationList, certificationsList } from '../data/resumeData';
 
-export const PrintResumeView: React.FC = () => {
+export const PrintResumeView = () => {
   return (
     <div className="hidden print:block p-8 bg-white text-slate-900 font-sans max-w-4xl mx-auto space-y-6">
       

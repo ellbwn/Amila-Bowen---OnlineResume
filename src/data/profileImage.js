@@ -135,4 +135,3 @@ export const AMILA_BOWEN_PHOTO = `data:image/svg+xml;utf8,${encodeURIComponent(`
   <path d="M 330 140 Q 380 160 410 220" stroke="#52525b" stroke-width="3" fill="none" opacity="0.4" stroke-linecap="round"/>
 </svg>
 `)}`;
-

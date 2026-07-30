@@ -4,17 +4,17 @@ import { SidebarPane } from './components/SidebarPane';
 import { MainContentPane } from './components/MainContentPane';
 import { ContactModal } from './components/ContactModal';
 import { PrintResumeView } from './components/PrintResumeView';
-import { Check, Copy } from 'lucide-react';
+import { Check } from 'lucide-react';
 
 export default function App() {
-  const [customImage, setCustomImage] = useState<string | null>(null);
+  const [customImage, setCustomImage] = useState(null);
   const [searchQuery, setSearchQuery] = useState('');
-  const [selectedSkillFilter, setSelectedSkillFilter] = useState<string | null>(null);
+  const [selectedSkillFilter, setSelectedSkillFilter] = useState(null);
   const [activeSection, setActiveSection] = useState('about');
   const [contactModalOpen, setContactModalOpen] = useState(false);
-  const [toastMessage, setToastMessage] = useState<string | null>(null);
+  const [toastMessage, setToastMessage] = useState(null);
 
-  const handleCopyText = (text: string, label: string) => {
+  const handleCopyText = (text, label) => {
     navigator.clipboard.writeText(text);
     setToastMessage(`Copied ${label}: ${text}`);
     setTimeout(() => {
@@ -26,7 +26,7 @@ export default function App() {
     window.print();
   };
 
-  const handleNavigateSection = (sectionId: string) => {
+  const handleNavigateSection = (sectionId) => {
     setActiveSection(sectionId);
     const element = document.getElementById(sectionId);
     if (element) {

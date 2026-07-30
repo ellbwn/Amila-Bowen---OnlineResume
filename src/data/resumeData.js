@@ -1,6 +1,4 @@
-import { ContactInfo, WorkExperience, SkillCategory, EducationItem, CertificationItem } from '../types';
-
-export const contactInfo: ContactInfo = {
+export const contactInfo = {
   name: "Amila Bowen",
   title: "IT Professional",
   location: "Greater Tampa Bay Area, FL",
@@ -10,7 +8,7 @@ export const contactInfo: ContactInfo = {
   aboutMe: "Hi there! I'm an energetic, warm, and dedicated IT Professional who truly loves solving complex technical puzzles and empowering healthcare teams. I bring deep technical expertise in mission-critical healthcare systems, PACS/DICOM workflows, VMware virtualization, PowerShell automation, and 24/7 high-availability infrastructure. Combining an empathetic, collaborative spirit with a sharp, forward-thinking analytical mindset, I take pride in keeping systems bulletproof and supporting clinicians so they can focus on patient care. When I set my sights on a goal, I give it my absolute all!"
 };
 
-export const skillCategories: SkillCategory[] = [
+export const skillCategories = [
   {
     title: "Server Administration",
     categoryKey: "server-admin",
@@ -67,7 +65,7 @@ export const skillCategories: SkillCategory[] = [
   }
 ];
 
-export const experiences: WorkExperience[] = [
+export const experiences = [
   {
     id: "scimage",
     company: "ScImage",
@@ -141,7 +139,7 @@ export const experiences: WorkExperience[] = [
   }
 ];
 
-export const educationList: EducationItem[] = [
+export const educationList = [
   {
     id: "hillsborough",
     degree: "Continued Education",
@@ -158,7 +156,7 @@ export const educationList: EducationItem[] = [
   }
 ];
 
-export const certificationsList: CertificationItem[] = [
+export const certificationsList = [
   {
     id: "azure-admin",
     name: "Microsoft Azure Administrator",

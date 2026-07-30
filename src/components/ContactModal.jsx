@@ -1,14 +1,8 @@
 import React, { useState } from 'react';
-import { Mail, MapPin, Linkedin, Copy, Check, Send, X } from 'lucide-react';
+import { Mail, Copy, Check, Send, X } from 'lucide-react';
 import { contactInfo } from '../data/resumeData';
 
-interface ContactModalProps {
-  isOpen: boolean;
-  onClose: () => void;
-  onCopyText: (text: string, label: string) => void;
-}
-
-export const ContactModal: React.FC<ContactModalProps> = ({
+export const ContactModal = ({
   isOpen,
   onClose,
   onCopyText
@@ -18,7 +12,7 @@ export const ContactModal: React.FC<ContactModalProps> = ({
 
   if (!isOpen) return null;
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     setSubmitted(true);
     setTimeout(() => {

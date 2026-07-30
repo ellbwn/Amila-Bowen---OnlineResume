@@ -2,13 +2,7 @@ import React, { useState } from 'react';
 import { Camera, ZoomIn, Check } from 'lucide-react';
 import { AMILA_BOWEN_PHOTO } from '../data/profileImage';
 
-interface ProfileAvatarProps {
-  customImage?: string | null;
-  onImageChange?: (newUrl: string) => void;
-  size?: 'sm' | 'md' | 'lg' | 'xl';
-}
-
-export const ProfileAvatar: React.FC<ProfileAvatarProps> = ({
+export const ProfileAvatar = ({
   customImage,
   onImageChange,
   size = 'lg'
@@ -20,13 +14,13 @@ export const ProfileAvatar: React.FC<ProfileAvatarProps> = ({
   // Default fallback image matching headshot
   const defaultImage = customImage || AMILA_BOWEN_PHOTO;
 
-  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleFileChange = (e) => {
     const file = e.target.files?.[0];
     if (file) {
       const reader = new FileReader();
       reader.onloadend = () => {
         if (reader.result && onImageChange) {
-          onImageChange(reader.result as string);
+          onImageChange(reader.result);
           setShowUploadModal(false);
         }
       };
@@ -34,7 +28,7 @@ export const ProfileAvatar: React.FC<ProfileAvatarProps> = ({
     }
   };
 
-  const handleUrlSubmit = (e: React.FormEvent) => {
+  const handleUrlSubmit = (e) => {
     e.preventDefault();
     if (inputUrl.trim() && onImageChange) {
       onImageChange(inputUrl.trim());
